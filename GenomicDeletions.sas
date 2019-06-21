@@ -15,7 +15,7 @@ SET WORK.DELETIONS;
 Length_Deletion = Outermost_stop - Outermost_start + 1;
 RUN;
 
-/*Create a table of counts for the different AvgHrsperWeek values*/	
+/*Create a table of counts for the 50 most frequent gene deletion length values*/	
 PROC FREQ DATA=WORK.DELETIONS ORDER = FREQ;
 TABLES Length_Deletion/ MAXLEVELS = 50;
 RUN; 
